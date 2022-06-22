@@ -51,7 +51,7 @@ function validateEmail(){
 
 function validateMessage(){
     var message = document.getElementById('contact-message').value;
-    var required = 30;
+    var required = 20;
     var left = required -message.length;
     if(left > 0){
         messageError.innerHTML =left + 'more character required'
@@ -64,7 +64,7 @@ function validateMessage(){
 function validateForm(){
     if(!validateName() ||!validateMobile() || !validateEmail() || !validateMessage()){
         submitError.style.display = 'block';
-        submitError.innerHTML = 'Please fix error to submit'
+        submitError.innerHTML = 'Please fill all fields to submit'
         setTimeout(function(){submitError.style.display = 'none';}, 3000);
         return false;
     }
